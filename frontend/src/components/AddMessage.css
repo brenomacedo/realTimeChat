@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+.addMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.addMessage textarea{
+    width: 400px;
+    border: 0;
+    outline: none;
+    height: 100px;
+    margin: 10px 0;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 5px;
+    font-size: 20px;
+    resize: none;
+}
+
+.addMessage button{
+    width: 400px;
+    color: white;
+    background-color: lightseagreen;
+    padding: 10px;
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+}

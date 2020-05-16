@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+.messages-box{
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    overflow: auto;
+}
+
+.author{
+    font-size: 10px;
+    color: lightseagreen;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.description{
+    font-size: 15px;
+    color: black;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.message{
+    -webkit-box-shadow: 10px 10px 46px -9px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 46px -9px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 46px -9px rgba(0,0,0,0.75);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
