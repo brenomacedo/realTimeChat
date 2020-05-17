@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Message from './Message'
 import './Messages.css'
 
+
 export default props => {
+    
+    const socket = props.socket
+    const [messages, setMessages] = useState([])
+
+    socket.on('messageReceived', msg => {
+        
+        setMessages([...messages, msg])
+        
+    })
+
+    const renderRows = () => {
+        return messages.map((item, index) => (
+            <Message key={index} {...item} />
+        ))
+    }
+
     return (
         <div className='messages-box'>
-            <div className='message'>
-                <div className='author'>Breno Macêdo</div>
-                <div className='description'>Oi, pessoal, tudo bem com vocês?</div>
-            </div>
+            {renderRows()}
         </div>
     )
 }

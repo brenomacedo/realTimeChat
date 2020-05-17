@@ -6,9 +6,14 @@ const server = http.createServer(app)
 
 const io = socket(server)
 io.on('connection', socket => {
-
+    socket.on('newMessage', msg => {
+        socket.broadcast.emit('messageReceived', msg)
+    })
+    socket.on('newMessage', msg => {
+        socket.emit('messageReceived', msg)
+    })
 })
 
-server.listen(3333, () => {
+server.listen(3003, () => {
     console.log('running!')
 })
